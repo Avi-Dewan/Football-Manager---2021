@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.mainController">
+   <children>
+      <BorderPane layoutX="311.0" layoutY="218.0" prefHeight="800.0" prefWidth="1250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="110.0" prefWidth="1250.0" style="-fx-background-color: DarkGray;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="97.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Main.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="13.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox prefHeight="110.0" prefWidth="180.0">
+                     <children>
+                        <HBox prefHeight="49.0" prefWidth="370.0">
+                           <children>
+                              <Label styleClass="shadow" stylesheets="@../styles/style.css" text="Football" textAlignment="CENTER" textFill="#796e6e">
+                                 <font>
+                                    <Font name="Cambria Bold" size="25.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="53.0" prefWidth="337.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="91.0" styleClass="shadow" stylesheets="@../styles/style.css" text="Manager" textFill="#837a7a">
+                                 <font>
+                                    <Font name="Cambria" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label styleClass="shadow" stylesheets="@../styles/style.css" text="- 2021" textFill="#948d73">
+                                 <font>
+                                    <Font name="Cambria Italic" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="7.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="3.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <ImageView fitHeight="77.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Club.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="350.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="name" prefHeight="63.0" prefWidth="357.0" styleClass="shadow" stylesheets="@../styles/style.css" textFill="#615c5c">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="43.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" top="20.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="701.0" prefWidth="333.0" style="-fx-background-color: Gainsboro;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="62.0" prefWidth="333.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="57.0" prefWidth="247.0" text="Select Search Method" textFill="#797777">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Search.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="15.0" top="15.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="49.0" prefWidth="333.0" />
+                  <HBox prefHeight="3.0" prefWidth="333.0">
+                     <children>
+                        <Separator prefHeight="1.0" prefWidth="426.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="333.0">
+                     <children>
+                        <TextField fx:id="sName" prefHeight="25.0" prefWidth="160.0" promptText="Enter player name:">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#searchName" stylesheets="@../styles/style.css" text="Search By Name" textFill="#fcfcfc">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="search-button" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="33.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="3.0" prefWidth="333.0">
+                     <children>
+                        <Separator prefHeight="0.0" prefWidth="426.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="333.0">
+                     <children>
+                        <TextField fx:id="sPosition" prefWidth="160.0" promptText="Enter player postion">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#searchPosition" stylesheets="@../styles/style.css" text="Search By Position" textFill="#fcfcfc">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="search-button" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="3.0" prefWidth="333.0">
+                     <children>
+                        <Separator prefHeight="0.0" prefWidth="426.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="333.0">
+                     <children>
+                        <TextField fx:id="sCountry" prefWidth="160.0" promptText="Enter player country">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#searchCountry" stylesheets="@../styles/style.css" text="Search By Country" textFill="#fcfcfc">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="search-button" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="3.0" prefWidth="333.0">
+                     <children>
+                        <Separator prefHeight="1.0" prefWidth="426.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="333.0">
+                     <children>
+                        <Label text="From: $">
+                           <HBox.margin>
+                              <Insets left="12.0" top="13.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="sLow" prefHeight="30.0" prefWidth="113.0" promptText="Lowest">
+                           <HBox.margin>
+                              <Insets left="2.0" top="7.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="To: $">
+                           <HBox.margin>
+                              <Insets left="12.0" top="13.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="sHigh" prefHeight="30.0" prefWidth="117.0" promptText="Highest">
+                           <HBox.margin>
+                              <Insets left="2.0" top="7.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="42.0" prefWidth="333.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#searchSalary" stylesheets="@../styles/style.css" text="Search By Salary" textFill="#fcfcfc">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="search-button" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="205.0" top="1.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="333.0">
+                     <children>
+                        <Separator prefHeight="1.0" prefWidth="426.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="333.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchMxAge" stylesheets="@../styles/style.css" text="Max Age" textFill="#fcfcfc" HBox.hgrow="ALWAYS">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="search-button" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="130.0" top="4.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="3.0" prefWidth="333.0">
+                     <children>
+                        <Separator prefHeight="1.0" prefWidth="426.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="333.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchMxSalary" stylesheets="@../styles/style.css" text="Max Salary" textFill="#fcfcfc">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="search-button" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="125.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="3.0" prefWidth="333.0">
+                     <children>
+                        <Separator prefHeight="1.0" prefWidth="426.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="333.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchMxHeight" stylesheets="@../styles/style.css" text="Max Height" textFill="#fcfcfc">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="search-button" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="125.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="3.0" prefWidth="333.0">
+                     <children>
+                        <Separator prefHeight="1.0" prefWidth="426.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="333.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#CnWiseCount" stylesheets="@../styles/style.css" text="Country Wise Count" textFill="#fcfcfc">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="search-button" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="105.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="3.0" prefWidth="333.0">
+                     <children>
+                        <Separator prefHeight="1.0" prefWidth="426.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#totalSalary" stylesheets="@../styles/style.css" text="Total Salary" textFill="#fcfcfc">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="search-button" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="125.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="333.0">
+                     <children>
+                        <Separator prefHeight="1.0" prefWidth="426.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="84.0" prefWidth="333.0">
+                     <children>
+                        <ImageView fitHeight="51.0" fitWidth="83.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/market.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="30.0" right="50.0" top="13.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <ImageView fitHeight="47.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/exit.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="60.0" top="13.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children></HBox>
+                  <HBox prefHeight="46.0" prefWidth="333.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#showMarket" prefHeight="25.0" prefWidth="61.0" stylesheets="@../styles/style.css" text="Market" textFill="#f2ecec">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="45.0" right="57.0" top="3.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="search-button" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </Button>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Button mnemonicParsing="false" onAction="#logout" prefHeight="23.0" prefWidth="60.0" stylesheets="@../styles/style.css" text="Logout" textFill="#f8f4f4">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="48.0" top="3.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="search-button" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="672.0" prefWidth="917.0" style="-fx-background-color: SlateGray;" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="table" editable="true" layoutX="72.0" layoutY="129.0" opacity="0.72" prefHeight="451.0" prefWidth="752.0" stylesheets="@../styles/style.css">
+                    <columns>
+                      <TableColumn fx:id="tName" prefWidth="107.0" text="Name" />
+                      <TableColumn fx:id="tPos" prefWidth="107.0" text="Position" />
+                        <TableColumn fx:id="tNum" prefWidth="107.0" text="Number" />
+                        <TableColumn fx:id="tAge" prefWidth="107.0" text="Age" />
+                        <TableColumn fx:id="tCn" prefWidth="107.0" text="Country" />
+                        <TableColumn fx:id="tHeight" prefWidth="107.0" text="Height" />
+                        <TableColumn fx:id="tSalary" prefWidth="107.0" text="Salary" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="table2" layoutX="250.0" layoutY="121.0" opacity="0.72" prefHeight="464.0" prefWidth="323.0">
+                    <columns>
+                      <TableColumn fx:id="t2countryName" prefWidth="160.0" text="Country" />
+                      <TableColumn fx:id="t2PlayersCount" prefWidth="160.0" text="Number of Players" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="initT1" layoutX="34.0" layoutY="47.0" prefHeight="19.0" prefWidth="169.0" styleClass="shadow" stylesheets="@../styles/style.css" textAlignment="CENTER" textFill="#c1bdbd">
+                     <font>
+                        <Font name="Cambria Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="initT2" layoutX="34.0" layoutY="73.0" prefHeight="20.0" prefWidth="281.0" styleClass="shadow" stylesheets="@../styles/style.css" textAlignment="CENTER" textFill="#c1bdbd">
+                     <font>
+                        <Font name="Cambria Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalSlContainer" layoutX="244.0" layoutY="121.0" prefHeight="390.0" prefWidth="402.0" styleClass="search-button" stylesheets="@../styles/style.css" text="Total Yearly Salary:" textFill="#d7d0d0">
+                     <font>
+                        <Font name="Cambria Bold" size="32.0" />
+                     </font>
+                     <padding>
+                        <Insets left="60.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="totalSalary" layoutX="340.0" layoutY="354.0" prefHeight="53.0" prefWidth="217.0" textFill="#575252">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sResult" layoutX="189.0" layoutY="46.0" styleClass="shadow" stylesheets="@../styles/style.css" text="Search result(s) :  " textAlignment="CENTER" textFill="#dacccc">
+                     <font>
+                        <Font name="Cambria Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sResultText" layoutX="350.0" layoutY="47.0" prefHeight="20.0" prefWidth="355.0" styleClass="shadow" stylesheets="@../styles/style.css" textAlignment="CENTER" textFill="#dacccc">
+                     <font>
+                        <Font name="Cambria Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="errorSearch" layoutX="198.0" layoutY="79.0" prefHeight="26.0" prefWidth="507.0" textFill="#bf3131">
+                     <font>
+                        <Font name="Franklin Gothic Medium" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="toHomeBtn" layoutX="758.0" layoutY="30.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="35.0" prefWidth="122.0" stylesheets="@../styles/style.css" text="Go to Home Page" textFill="#fcfcfc">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="search-button" />
+                     </styleClass>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buy2" layoutX="763.0" layoutY="639.0" mnemonicParsing="false" onAction="#buyPlayer" prefHeight="25.0" prefWidth="61.0" stylesheets="@../styles/style.css" text="Buy" textFill="#f2ecec">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="search-button" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <TextField fx:id="buy1" layoutX="631.0" layoutY="599.0" prefHeight="25.0" prefWidth="193.0" promptText="Enter player's name to buy" />
+                  <TextField fx:id="sell2" layoutX="623.0" layoutY="639.0" prefHeight="25.0" prefWidth="134.0" promptText="Enter Price" />
+                  <TextField fx:id="sell1" layoutX="623.0" layoutY="599.0" prefHeight="25.0" prefWidth="201.0" promptText="Enter player's name to sell" />
+                  <Button fx:id="sell3" layoutX="763.0" layoutY="639.0" mnemonicParsing="false" onAction="#sellPlayer" prefHeight="25.0" prefWidth="61.0" stylesheets="@../styles/style.css" text="Sell" textFill="#f2ecec">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="search-button" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <Label fx:id="mList" layoutX="292.0" layoutY="48.0" prefHeight="50.0" prefWidth="184.0" styleClass="shadow" stylesheets="@../styles/style.css" text="Market List" textAlignment="CENTER" textFill="#dacccc">
+                     <font>
+                        <Font name="Cambria Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="marketTable" editable="true" layoutX="72.0" layoutY="128.0" opacity="0.72" prefHeight="451.0" prefWidth="752.0" stylesheets="@../styles/style.css">
+                     <columns>
+                        <TableColumn fx:id="mName" prefWidth="120.0" text="Name" />
+                        <TableColumn fx:id="mPos" prefWidth="120.0" text="Position" />
+                        <TableColumn fx:id="mCountry" prefWidth="120.0" text="Country" />
+                        <TableColumn fx:id="mAge" prefWidth="120.0" text="Age" />
+                        <TableColumn fx:id="mCLub" prefWidth="145.0" text="Selling Club" />
+                        <TableColumn fx:id="mPrice" prefWidth="120.0" text="Price Needed to Buy" />
+                     </columns>
+                  </TableView>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="4.0" />
+               </BorderPane.margin>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
